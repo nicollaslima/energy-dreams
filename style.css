@@ -1,0 +1,632 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Dancing+Script:wght@400;500;600;700&family=Mandali&display=swap'); /*importando fontes do google*/
+
+/*
+    font-family: 'Carter One', cursive; 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Mandali', sans-serif;
+*/
+:root{ /*criando variaveis para as fontes importadas do google*/
+    --fonte1:'Carter One', cursive;
+    --fonte2:'Dancing Script', cursive;
+    --fonte3:'Mandali', sans-serif;
+}
+@keyframes fadein {  /* a regra keyframe ira definir as etapas da sua animaçao (animation)*/
+  from {opacity: 0} 
+  to {opacity: 1} 
+ }
+
+ ::-webkit-scrollbar{ /* É um pseudo elemento nao padrao, que permite modificar a barra de rolagem do navegador*/
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+::-webkit-scrollbar-thumb{ /*É um pseudo elemento nao padrao, que permite modificar a barra de rolagem arrastavel do navegador */
+    border-radius: 5px;
+    background-image: linear-gradient( 45deg,  rgba(13, 133, 13, 0.911) 10%, rgba(4, 189, 4, 0.911)30% ,rgba(176, 255, 31, 0.911) );
+}
+html{
+    scroll-behavior: smooth;
+}
+:target{ 
+    scroll-margin-top: 1em;
+}
+
+#icolampada{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.menuburger .topicoburger{
+    text-decoration: none;
+    display: block;
+    width: 96%;
+    padding: 20px 5px;
+    color: black;
+}
+#menuburger{
+    width: 50px;
+    height: 50px;
+}
+ #menuburger:hover{
+    height: 60px;
+    transition:  0.5s;
+}
+.topicoburger:hover{
+    background-color: rgba(10, 10, 15, 0.685);
+    color: aliceblue;
+    transition: 1s;
+}
+label{
+    transform: translatey(-15px);
+    left: 0.5vh;
+    top: 1.7vh;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+}
+.menuburger {
+    width: 150px;
+    height: 100vh;
+    background-image: linear-gradient( 45deg,  rgba(13, 133, 13, 0.596) 10%, rgba(4, 189, 4, 0.514)30% ,rgba(177, 255, 31, 0.527) );
+    position: absolute;
+    left: -250px;
+    top: 0px;  
+}
+.menuburger ul {
+    position: absolute;
+    list-style: none;
+    padding-inline-start: 1%;
+    width: 100%;
+    top: 35px;
+    font-family: var(--fonte2);
+    font-size: large;
+}
+#check[type="checkbox"]{
+    display: none;
+}
+#check[type="checkbox"]:checked ~.menuburger{
+    transform: translateX(250px);
+    transition: 1s;
+    position: fixed;
+}
+#capa{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/fotocapa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capausina{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/seila.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capasistema{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/energia-solar.png);
+    background-size: cover;
+    background-position: center;
+}
+#capaorigem{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/seila.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capaorigemP{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/fotocapa\ pix.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capapg1{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/mata.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+#capapg2{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/planejamento.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capapg3{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/instplac2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capasurg{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/lampada-colorida-com-paineis-solares1.jpg);
+    background-size: cover;
+    background-position: center left;
+}
+#capaon{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(img/mund.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capaoff{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/planejamento.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#capahelio{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/instplac2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#capaSistemaonoff{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/lampada-colorida-com-paineis-solares1.jpg);
+    background-size: cover;
+    background-position: center left;
+}
+
+#capaslogan{
+    position: absolute;
+    width: 80%;
+    height: max-content;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-wrap: wrap;
+    animation: fadein 2s linear;
+}
+#capaslogan span{
+    font-family: var(--fonte1);
+    font-size: xx-large;
+    background-image: linear-gradient( 45deg,  rgba(16, 160, 16, 0.911) 10%, rgba(10, 141, 10, 0.911)30% ,rgba(36, 105, 4, 0.911) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: lighter;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 10px 0px 10px 0px;
+    align-items: center;
+    justify-content: center;  
+    text-shadow: 2px 2px rgba(80, 80, 80, 0.555);
+  
+}
+#icohome{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    left: 3%;
+    position: absolute;
+    cursor: pointer;
+}
+.padrao{
+    display: inline-flex;
+    width: 99%;
+    height: 99vh;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+.conteudo {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    margin: 5% 0% 5% 0%;  
+}
+.padraoConteudo{
+    display: inline-flex;
+    width: 95%;
+    height: max-content;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.padrao a {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    
+}
+.icocapa{
+    width: 60px;
+    height: 60px;
+   
+}
+.padrao a:hover {
+    background-color: rgba(155, 155, 155, 0);
+    border-radius: 20px 20px;
+    padding: 3px;
+    width: 60px;
+    height: 60px; 
+    transition: 0.4s;
+}
+.padrao a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    
+}
+.botao #h1botao  {
+    display: inline-flex;
+    width: max-content;
+    height: max-content;
+    padding: 2px 10px 2px 10px ;
+    border-radius: 20px 20px;
+    background-image: linear-gradient( 45deg,  rgba(13, 133, 13, 0.911) 10%, rgba(4, 189, 4, 0.911)30% ,rgba(176, 255, 31, 0.911) );
+    font-size: medium;
+    border: 1px;
+    
+}
+.botao a{
+    text-decoration: none;
+    color: white;
+    
+    
+}
+.auxbotao{
+    display: inline-flex;
+    height: max-content;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.botao #h1botao:hover { /* essa pseudo classe serve para quando o mouse estiver em cima desse elemento acontecera o que nós colocarmos dentro das chaves*/
+    box-shadow: 2px 2px 2px 2px rgba(2, 133, 41, 0.582);
+    transition: 0.5s; /* tempo de transiçao da mudança de estado do elemento*/
+}
+.botao a:hover {
+    font-size: large;
+    transition: 0.5s;
+}
+.padraoConteudo img {
+    width: 250px;
+    height: 250px;
+    margin: 3% 5% 3% 5% ;
+    border-radius: 10px;
+    
+}
+.padraoConteudo a{
+    display: inline-flex;
+    justify-content: center;
+}
+.padraoConteudo img:hover{
+    border-radius: 10px;
+    box-shadow: 5px 2px 5px 2px rgba(128, 128, 128, 0.582);
+    transition: 1s;
+    
+}
+.padraoConteudo span{
+    width: 400px;
+    height: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    animation: fadein 2s linear;
+    margin: 3% 5% 3% 5% ;
+    overflow-y: auto;
+    padding: 10px;
+    text-indent: 30px;
+}
+.conteudo h1{
+    font-family: var(--fonte3);
+    color: yellowgreen;
+    font-size: x-large;
+    animation: fadein 2s linear; /* colocando tempo da animaçao e a forma que ele ocorrera, no caso linear*/
+    text-align: center;
+}
+.topico{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imgParalax {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/paineis-solares-e-usina-eolica-fora2.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.video{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.botaoup{
+    
+    display: inline-flex;
+    width: max-content;
+    height: max-content;
+    
+}
+#botaoupid img{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 1;
+    top: 92vh;
+    right: 1vh;
+    animation: fadein 2s linear;
+    border-radius: 50% 50%;
+}
+#botaoupid img:hover{
+    width: 45px;
+    height: 45px;
+    box-shadow: 5px 2px 5px 2px rgba(128, 128, 128, 0.582);
+}
+
+footer{
+    display: flex;
+    width: 98%;
+    height: max-content;
+    background-image: linear-gradient( 45deg,  rgba(13, 133, 13, 0.911) 10%, rgba(4, 189, 4, 0.911)30% ,rgba(176, 255, 31, 0.911) );
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 2px;
+}
+address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;  
+}
+address h1{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Mandali', sans-serif;
+    margin: 0px;
+}   
+address span{
+    font-size: medium;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 5px rgba(5, 85, 2, 0.829);
+    font-weight: normal;
+}
+address #citacao{
+    font-family: 'Mandali', sans-serif;
+}
+/*  as media sao regras para incluir um bloco de propriedades css caso uma determinada condiçao for verdadeira*/
+@media screen and (min-width: 800px) { /* quando o tamanho da tela for de 800px pra cima ele aumenta o comprimento e a largura da img para 350px cada*/
+    .padraoConteudo img {
+        width: 350px;
+        height: 350px;
+       
+    }
+}
+.imgParalaxS {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/teste.jpeg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxorigem {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/solpara.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxusina {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/usinasold.jpg);
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxsistema {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/Foto-Paulo-Cunha-para-artigo-scaled.jpg);
+    background-attachment: fixed;
+    background-position: center left;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxorigemp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/enel.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/enel.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxoff {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/enel.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxhelio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/enel.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxsistemaonoff {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/enel.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+.imgParalaxH {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90vh;
+    background-image: url(imagens/uma-lampada-nao-luminosa-paira-no-espaco-da-copia-de-fundo-desfocado-escuro2.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    margin: 5%;
+    border-radius: 2px;
+}
+#capaH{
+    width: 99%;
+    height: 99%; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.479) ;
+    background-image: url(imagens/fotocapaH.jpg);
+    background-size: cover;
+    background-position: center right;
+    
+}
+.padraoConteudo span p{
+    text-underline-position: center;
+}
+@media screen and (max-width: 600px){
+    .padraoConteudo {
+        flex-direction: column;
+        
+
+    }   
+} 
+@media screen and (min-width: 800px){
+    .padrao {
+        height: 50vh;
+        
+
+    }   
+} 
+@media screen and (min-width: 600px){
+    label {
+        left: 10px;
+        
+
+    }   
+} 
+@media screen and (max-width: 600px){
+    .padraoConteudo span{
+        width: 250px;
+        
+        
+    }   
+} 
+
+@media screen and (max-width: 500px) {
+    #capaslogan {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px) {
+    .padrao a {
+        
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Carrocel */
